@@ -1,0 +1,23 @@
+/* audio-button.css */
+
+.play-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Прозрачный фон */
+    position: relative;
+
+  }
+  
+  .play-button {
+    background-color: transparent; /* Прозрачный фон кнопки */
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Удаление внутренних отступов */
+  }
+  
+  .play-icon {
+    font-size: 500px; /* Размер значка "play" */
+    color: #7dbaff4b; /* Цвет значка */
+  }
+  
