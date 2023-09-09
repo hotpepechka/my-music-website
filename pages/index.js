@@ -31,17 +31,7 @@ const Home = () => {
 
       {/* Изображение на весь экран */}
       <div
-        style={{
-          backgroundImage: 'url("photo/photo.jpeg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          width: '100vw',
-          height: '100vh',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          zIndex: -1,
-        }}
+       
       />
 
       {/* Компонент воспроизведения музыки */}
