@@ -8,6 +8,7 @@ const AudioPlayer = ({ src }) => {
     if (audioRef.current) {
       audioRef.current.play();
       setShowPlayButton(false); // После воспроизведения скрываем кнопку
+      openFullscreen(); // Вызываем функцию для открытия полноэкранного режима
     }
   };
 
@@ -16,6 +17,19 @@ const AudioPlayer = ({ src }) => {
       audioRef.current.src = src;
     }
   }, [src]);
+
+  const openFullscreen = () => {
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari и Opera
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+      elem.msRequestFullscreen();
+    }
+  };
 
   return (
     <div className="play-button-container">
